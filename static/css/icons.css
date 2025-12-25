@@ -1,53 +1,54 @@
-/* Styles pour les icônes SVG */
+/* Styles pour les icônes */
 .icon {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 1em;
     height: 1em;
-    fill: currentColor;
+    font-style: normal;
+    font-weight: normal;
     vertical-align: middle;
 }
 
-.icon-large {
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.icon-medium {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.icon-small {
-    width: 1rem;
-    height: 1rem;
-}
+/* Icônes avec caractères Unicode simples */
+.icon-stethoscope::before { content: "⚕"; }
+.icon-microscope::before { content: "🔬"; }
+.icon-phone::before { content: "📞"; }
+.icon-ambulance::before { content: "🚑"; }
+.icon-injection::before { content: "💉"; }
+.icon-home::before { content: "🏠"; }
+.icon-lightning::before { content: "⚡"; }
+.icon-magnet::before { content: "🧲"; }
+.icon-radar::before { content: "📡"; }
+.icon-computer::before { content: "💻"; }
+.icon-search::before { content: "🔍"; }
+.icon-location::before { content: "📍"; }
+.icon-clock::before { content: "🕒"; }
+.icon-car::before { content: "🚗"; }
+.icon-map::before { content: "🗺"; }
 
 /* Styles spécifiques pour les sections */
 .service-icon {
     display: block;
     margin-bottom: 1rem;
-}
-
-.service-icon .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: url(#serviceGradient);
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
 }
 
 .equipment-icon {
     margin-bottom: 0.8rem;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
 }
 
-.equipment-icon .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: white;
-}
-
-.location-icon .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: var(--primary-color);
+.location-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
 .search-btn {
@@ -57,22 +58,12 @@
 }
 
 .search-btn .icon {
-    width: 1rem;
-    height: 1rem;
-    fill: currentColor;
+    font-size: 1rem;
 }
 
 /* Animation pour les icônes au hover */
-.service-item:hover .service-icon .icon,
-.equipment-card:hover .equipment-icon .icon {
+.service-item:hover .service-icon,
+.equipment-card:hover .equipment-icon {
     transform: scale(1.1);
     transition: transform 0.3s ease;
-}
-
-/* Dégradé pour les icônes de service */
-.service-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
