@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Médecins - Clinique Priorité Santé</title>
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/icons.css">
     <style>
         .page-header {
             background: var(--gradient-primary);
@@ -173,7 +174,10 @@
                     <option value="orthopédie">Orthopédie</option>
                     <option value="dermatologie">Dermatologie</option>
                 </select>
-                <button class="search-btn" onclick="searchDoctors()">🔍 Rechercher</button>
+                <button class="search-btn" onclick="searchDoctors()">
+                    <svg class="icon"><use href="static/images/icons.svg#search"></use></svg>
+                    Rechercher
+                </button>
             </div>
         </div>
     </section>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinique Priorité Santé - Là où la guérison se sent comme à la maison</title>
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/icons.css">
     <style>
         /* Ajustement pour rendre les cartes de témoignage plus carrées */
         .testimonial-card {
@@ -188,7 +189,9 @@
                         <option>Pediatricien</option>
                     </select>
                     <input type="text" class="search-input" placeholder="Search doctor name...">
-                    <button class="search-btn" onclick="searchDoctor()">🔍</button>
+                    <button class="search-btn" onclick="searchDoctor()">
+                        <svg class="icon"><use href="static/images/icons.svg#search"></use></svg>
+                    </button>
                 </div>
             </div>
 
@@ -264,7 +267,9 @@
 
                     <div class="disease-search-box">
                         <input type="text" placeholder="Search diseases..." id="disease-search-input">
-                        <button class="search-btn" onclick="searchDisease()">🔍</button>
+                        <button class="search-btn" onclick="searchDisease()">
+                            <svg class="icon"><use href="static/images/icons.svg#search"></use></svg>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-/* Icon System */
+/* Styles pour les icônes SVG */
 .icon {
     display: inline-block;
     width: 1em;
@@ -7,58 +7,72 @@
     vertical-align: middle;
 }
 
-.icon-sm {
-    width: 0.875em;
-    height: 0.875em;
+.icon-large {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
-.icon-lg {
-    width: 1.5em;
-    height: 1.5em;
+.icon-medium {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-.icon-xl {
-    width: 2em;
-    height: 2em;
+.icon-small {
+    width: 1rem;
+    height: 1rem;
 }
 
-.icon-2xl {
-    width: 2.5em;
-    height: 2.5em;
-}
-
-.icon-3xl {
-    width: 3em;
-    height: 3em;
-}
-
-/* Service Icons */
+/* Styles spécifiques pour les sections */
 .service-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
     display: block;
-    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-icon .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: url(#serviceGradient);
 }
 
 .equipment-icon {
-    font-size: 2.5rem;
     margin-bottom: 0.8rem;
-    color: white;
 }
 
-/* Social Icons */
-.social-link .icon {
-    width: 1.2em;
-    height: 1.2em;
+.equipment-icon .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
 }
 
-/* Location Icons */
-.location-icon {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.location-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--primary-color);
 }
 
-/* Search Icon */
+.search-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .search-btn .icon {
-    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
+/* Animation pour les icônes au hover */
+.service-item:hover .service-icon .icon,
+.equipment-card:hover .equipment-icon .icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Dégradé pour les icônes de service */
+.service-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Clinique - Clinique Priorité Santé</title>
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/icons.css">
     <style>
         .page-header {
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
@@ -255,7 +256,10 @@
                     <option value="dixinn">Dixinn</option>
                     <option value="camayenne">Camayenne</option>
                 </select>
-                <button class="search-btn" onclick="searchCliniques()">🔍 Rechercher</button>
+                <button class="search-btn" onclick="searchCliniques()">
+                    <svg class="icon"><use href="static/images/icons.svg#search"></use></svg>
+                    Rechercher
+                </button>
             </div>
         </div>
     </section>
@@ -281,37 +285,49 @@
             
             <div class="services-grid">
                 <div class="service-item">
-                    <span class="service-icon">🩺</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#stethoscope"></use></svg>
+                    </span>
                     <h3 class="service-title">Consultations</h3>
                     <p>Consultations médicales générales et spécialisées</p>
                 </div>
                 
                 <div class="service-item">
-                    <span class="service-icon">🔬</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#microscope"></use></svg>
+                    </span>
                     <h3 class="service-title">Analyses</h3>
                     <p>Analyses biologiques et examens de laboratoire</p>
                 </div>
                 
                 <div class="service-item">
-                    <span class="service-icon">📱</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#phone"></use></svg>
+                    </span>
                     <h3 class="service-title">Télémédecine</h3>
                     <p>Consultations à distance et suivi médical</p>
                 </div>
                 
                 <div class="service-item">
-                    <span class="service-icon">🚑</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#ambulance"></use></svg>
+                    </span>
                     <h3 class="service-title">Ambulance</h3>
                     <p>Service d'ambulance et transport médical</p>
                 </div>
                 
                 <div class="service-item">
-                    <span class="service-icon">💉</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#injection"></use></svg>
+                    </span>
                     <h3 class="service-title">Vaccinations</h3>
                     <p>Programme complet de vaccination</p>
                 </div>
                 
                 <div class="service-item">
-                    <span class="service-icon">🏠</span>
+                    <span class="service-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#home"></use></svg>
+                    </span>
                     <h3 class="service-title">Soins à Domicile</h3>
                     <p>Soins médicaux et infirmiers à domicile</p>
                 </div>
@@ -327,37 +343,49 @@
             
             <div class="equipment-grid">
                 <div class="equipment-card">
-                    <div class="equipment-icon">🔬</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#microscope"></use></svg>
+                    </div>
                     <h3 class="equipment-title">Scanner CT</h3>
                     <p class="equipment-description">Scanner haute résolution pour imagerie médicale précise et diagnostic rapide.</p>
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-icon">🧲</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#magnet"></use></svg>
+                    </div>
                     <h3 class="equipment-title">IRM</h3>
                     <p class="equipment-description">Imagerie par résonance magnétique pour examens détaillés sans radiation.</p>
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-icon">📡</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#radar"></use></svg>
+                    </div>
                     <h3 class="equipment-title">Échographie 4D</h3>
                     <p class="equipment-description">Échographe dernière génération pour suivi de grossesse et examens.</p>
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-icon">⚡</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#lightning"></use></svg>
+                    </div>
                     <h3 class="equipment-title">Défibrillateurs</h3>
                     <p class="equipment-description">Équipements de réanimation modernes pour urgences cardiaques.</p>
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-icon">🔬</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#microscope"></use></svg>
+                    </div>
                     <h3 class="equipment-title">Microscopes</h3>
                     <p class="equipment-description">Microscopes haute précision pour analyses pathologiques.</p>
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-icon">💻</div>
+                    <div class="equipment-icon">
+                        <svg class="icon"><use href="static/images/icons.svg#computer"></use></svg>
+                    </div>
                     <h3 class="equipment-title">Système Digital</h3>
                     <p class="equipment-description">Dossiers médicaux électroniques et gestion digitale.</p>
                 </div>
