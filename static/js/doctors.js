@@ -10,7 +10,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Soussou"],
         phone: "+224 123 456 789",
         email: "a.traore@prioritesante.gn",
-        avatar: "👩‍⚕️"
+        avatar: "icon-doctor-female"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Peul"],
         phone: "+224 123 456 790",
         email: "m.diallo@prioritesante.gn",
-        avatar: "👨‍⚕️"
+        avatar: "icon-doctor-male"
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Malinké"],
         phone: "+224 123 456 791",
         email: "f.camara@prioritesante.gn",
-        avatar: "👩‍⚕️"
+        avatar: "icon-doctor-female"
     },
     {
         id: 4,
@@ -46,7 +46,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Allemand"],
         phone: "+224 123 456 792",
         email: "i.sow@prioritesante.gn",
-        avatar: "👨‍⚕️"
+        avatar: "icon-doctor-male"
     },
     {
         id: 5,
@@ -58,7 +58,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Arabe", "Soussou"],
         phone: "+224 123 456 793",
         email: "m.bah@prioritesante.gn",
-        avatar: "👩‍⚕️"
+        avatar: "icon-doctor-female"
     },
     {
         id: 6,
@@ -70,7 +70,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Malinké"],
         phone: "+224 123 456 794",
         email: "a.conde@prioritesante.gn",
-        avatar: "👨‍⚕️"
+        avatar: "icon-doctor-male"
     },
     {
         id: 7,
@@ -82,7 +82,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Peul", "Soussou"],
         phone: "+224 123 456 795",
         email: "h.kaba@prioritesante.gn",
-        avatar: "👩‍⚕️"
+        avatar: "icon-doctor-female"
     },
     {
         id: 8,
@@ -94,7 +94,7 @@ const DOCTORS_DATA = [
         languages: ["Français", "Anglais", "Néerlandais"],
         phone: "+224 123 456 796",
         email: "s.toure@prioritesante.gn",
-        avatar: "👨‍⚕️"
+        avatar: "icon-doctor-male"
     }
 ];
 
@@ -123,7 +123,7 @@ function renderDoctors(doctors) {
     grid.innerHTML = doctors.map(doctor => `
         <div class="doctor-card" data-specialty="${doctor.specialty.toLowerCase()}">
             <div class="doctor-image">
-                ${doctor.avatar}
+                <span class="icon ${doctor.avatar}"></span>
             </div>
             <div class="doctor-info">
                 <h3 class="doctor-name">${doctor.name}</h3>
@@ -138,13 +138,13 @@ function renderDoctors(doctors) {
                 
                 <div class="doctor-contact">
                     <a href="tel:${doctor.phone}" class="contact-btn">
-                        📞 Appeler
+                        <span class="icon icon-phone"></span> Appeler
                     </a>
                     <a href="mailto:${doctor.email}" class="contact-btn" style="background: var(--accent-color);">
-                        ✉️ Email
+                        <span class="icon icon-email"></span> Email
                     </a>
                     <a href="contact.html?doctor=${doctor.id}" class="contact-btn" style="background: var(--success-color);">
-                        📅 RDV
+                        <span class="icon icon-calendar"></span> RDV
                     </a>
                 </div>
             </div>

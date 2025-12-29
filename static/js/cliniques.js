@@ -242,40 +242,40 @@ function renderCliniques(cliniques) {
                 
                 <div class="clinique-details">
                     <div class="detail-row">
-                        <span class="detail-icon">📍</span>
+                        <span class="detail-icon icon-location"></span>
                         <span><strong>Adresse:</strong> ${clinique.address.street}, ${clinique.address.district}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-icon">🏛️</span>
+                        <span class="detail-icon icon-landmark"></span>
                         <span><strong>Repère:</strong> ${clinique.address.landmark}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-icon">👨‍⚕️</span>
+                        <span class="detail-icon icon-doctor"></span>
                         <span><strong>Directeur:</strong> ${clinique.director}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-icon">🏥</span>
+                        <span class="detail-icon icon-hospital"></span>
                         <span><strong>Capacité:</strong> ${clinique.capacity}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-icon">📅</span>
+                        <span class="detail-icon icon-calendar"></span>
                         <span><strong>Fondé en:</strong> ${clinique.established}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-icon">👥</span>
+                        <span class="detail-icon icon-patients"></span>
                         <span><strong>Patients/an:</strong> ${clinique.patients_per_year}</span>
                     </div>
                 </div>
                 
                 <div class="specialties-list">
-                    <h4>🩺 Spécialités:</h4>
+                    <h4><span class="icon icon-stethoscope"></span> Spécialités:</h4>
                     <div class="specialty-tags">
                         ${clinique.specialties.map(spec => `<span class="specialty-tag">${spec}</span>`).join('')}
                     </div>
                 </div>
                 
                 <div class="facilities-list">
-                    <h4>🏥 Équipements:</h4>
+                    <h4><span class="icon icon-hospital"></span> Équipements:</h4>
                     <div class="facility-tags">
                         ${clinique.facilities.map(facility => `<span class="facility-tag">${facility}</span>`).join('')}
                     </div>
@@ -283,21 +283,21 @@ function renderCliniques(cliniques) {
                 
                 <div class="contact-info">
                     <div class="contact-row">
-                        <span class="contact-icon">📞</span>
+                        <span class="contact-icon icon-phone"></span>
                         <span><strong>Standard:</strong> <a href="tel:${clinique.contact.phone}">${clinique.contact.phone}</a></span>
                     </div>
                     <div class="contact-row emergency">
-                        <span class="contact-icon">🚨</span>
+                        <span class="contact-icon icon-emergency"></span>
                         <span><strong>Urgences:</strong> <a href="tel:${clinique.contact.emergency}">${clinique.contact.emergency}</a></span>
                     </div>
                     <div class="contact-row">
-                        <span class="contact-icon">✉️</span>
+                        <span class="contact-icon icon-email"></span>
                         <span><strong>Email:</strong> <a href="mailto:${clinique.contact.email}">${clinique.contact.email}</a></span>
                     </div>
                 </div>
                 
                 <div class="hours-summary">
-                    <h4>🕒 Horaires:</h4>
+                    <h4><span class="icon icon-clock"></span> Horaires:</h4>
                     <div class="hours-item">
                         <strong>Consultations:</strong> ${clinique.hours.consultations}
                     </div>
@@ -308,16 +308,16 @@ function renderCliniques(cliniques) {
                 
                 <div class="clinique-actions">
                     <a href="tel:${clinique.contact.phone}" class="action-btn primary">
-                        📞 Appeler
+                        <span class="icon icon-phone"></span> Appeler
                     </a>
                     <a href="mailto:${clinique.contact.email}" class="action-btn secondary">
-                        ✉️ Email
+                        <span class="icon icon-email"></span> Email
                     </a>
                     <a href="https://maps.google.com/?q=${clinique.address.coordinates.lat},${clinique.address.coordinates.lng}" target="_blank" class="action-btn tertiary">
-                        🗺️ Localiser
+                        <span class="icon icon-map"></span> Localiser
                     </a>
                     <a href="contact.html?clinique=${clinique.id}" class="action-btn success">
-                        📅 RDV
+                        <span class="icon icon-calendar"></span> RDV
                     </a>
                 </div>
             </div>
@@ -337,14 +337,14 @@ function renderCliniques(cliniques) {
 // Obtenir l'icône selon le type de clinique
 function getClinicIcon(type) {
     const icons = {
-        'Clinique Principale': '🏥',
-        'Centre Médical': '🏢',
-        'Polyclinique': '🏛️',
-        'Centre de Santé': '🏪',
-        'Clinique Spécialisée': '⚕️',
-        'Maternité Spécialisée': '👶'
+        'Clinique Principale': '<span class="icon icon-hospital"></span>',
+        'Centre Médical': '<span class="icon icon-building"></span>',
+        'Polyclinique': '<span class="icon icon-clinic"></span>',
+        'Centre de Santé': '<span class="icon icon-health-center"></span>',
+        'Clinique Spécialisée': '<span class="icon icon-stethoscope"></span>',
+        'Maternité Spécialisée': '<span class="icon icon-baby"></span>'
     };
-    return icons[type] || '🏥';
+    return icons[type] || '<span class="icon icon-hospital"></span>';
 }
 
 // Initialiser la recherche

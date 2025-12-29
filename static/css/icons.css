@@ -27,6 +27,23 @@
 .icon-car::before { content: "🚗"; }
 .icon-map::before { content: "🗺"; }
 
+/* Nouvelles icônes pour les cliniques */
+.icon-hospital::before { content: "🏥"; }
+.icon-building::before { content: "🏢"; }
+.icon-clinic::before { content: "🏛"; }
+.icon-health-center::before { content: "🏪"; }
+.icon-baby::before { content: "👶"; }
+.icon-doctor::before { content: "👨‍⚕️"; }
+.icon-landmark::before { content: "🏛"; }
+.icon-calendar::before { content: "📅"; }
+.icon-patients::before { content: "👥"; }
+.icon-emergency::before { content: "🚨"; }
+.icon-email::before { content: "✉️"; }
+
+/* Avatars des médecins */
+.icon-doctor-female::before { content: "👩‍⚕️"; }
+.icon-doctor-male::before { content: "👨‍⚕️"; }
+
 /* Styles spécifiques pour les sections */
 .service-icon {
     display: block;
